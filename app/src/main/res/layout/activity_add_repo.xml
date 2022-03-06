@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddRepo">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="top"
+        android:background="@color/new_black">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:id="@+id/myToolbar"
+            app:title="Add Repo"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/back">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Owner/Organization"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/new_black"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/organization"
+        android:padding="7dp"
+        android:singleLine="true"
+        android:background="@drawable/edit_text_border"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Repo Name"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/new_black"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/repoName"
+        android:padding="7dp"
+        android:singleLine="true"
+        android:background="@drawable/edit_text_border"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/addNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="15dp"
+        android:text="ADD"
+        android:textSize="20dp"
+        android:visibility="visible"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        />
+
+
+
+</LinearLayout>
