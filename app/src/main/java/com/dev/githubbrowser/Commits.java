@@ -68,9 +68,6 @@ public class Commits extends AppCompatActivity {
         String owner = sharedPreferences.getString("owner","");
         String reponame = sharedPreferences.getString("reponame","");
 
-
-
-
         rQueue = Volley.newRequestQueue(this);
          String url = "https://api.github.com/repos/"+owner+"/"+reponame+"/commits?sha="+branchName;
 
@@ -80,21 +77,24 @@ public class Commits extends AppCompatActivity {
                     public void onResponse(JSONArray response) {
                         try {
                             for (int i = 0 ; i< response.length() ; i++){
-
+                                Log.d("asdfasdf", response.getJSONObject(i).toString());
+                                Log.d("asdfasdf", "\n");
                                 JSONObject jsonObject = response.getJSONObject(i);
                                 JSONObject jsonObjectS = jsonObject.getJSONObject("commit");
                                 JSONObject jsonObject1 = jsonObjectS.getJSONObject("author");
                                 String date = jsonObject1.getString("date");
                                 date = date.substring(0,10);
                                 String message = jsonObjectS.getString("message");
-                                JSONObject jsonObject2 = jsonObject.getJSONObject("author");
-                                String username = jsonObject2.getString("login");
-                                String aurl = jsonObject2.getString("avatar_url");
-                                int rawId = jsonObject2.getInt("id");
-                                String id = String.valueOf(rawId);
+
+//                                JSONObject jsonObject2 = jsonObject.getJSONObject("author");
+//                                String username = jsonObject2.getString("login");
+//                                String aurl = jsonObject2.getString("avatar_url");
+//                                int rawId = jsonObject2.getInt("id");
+//                                String id = String.valueOf(rawId);
 
 
-                            commitList.add(new Commit(date, aurl, username, message, id));
+//                            commitList.add(new Commit(date, aurl, username, message, id));
+                            commitList.add(new Commit(date, "avatar", "username", message, "id"));
                             }
 
 
@@ -105,12 +105,8 @@ public class Commits extends AppCompatActivity {
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                Log.d("asdfasdf", "errorrr");
                             }
-
-
-
-
-
                     }
                 }, new Response.ErrorListener() {
             @Override

@@ -37,11 +37,11 @@ public class FragAdapter extends RecyclerView.Adapter<FragAdapter.myviewholder>{
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
 
         holder.date.setText(Commits.get(position).getDate());
-        holder.username.setText(Commits.get(position).getUsername());
+//        holder.username.setText(Commits.get(position).getUsername());
         holder.commitMsg.setText(Commits.get(position).getMessage());
-        holder.id.setText(Commits.get(position).getId());
+//        holder.id.setText(Commits.get(position).getId());
         String urlLink = Commits.get(position).getAurl();
-        Glide.with(context).load(urlLink).into(holder.avatar);
+//        Glide.with(context).load(urlLink).into(holder.avatar);
     }
 
     @Override
@@ -56,9 +56,9 @@ public class FragAdapter extends RecyclerView.Adapter<FragAdapter.myviewholder>{
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             date = itemView.findViewById(R.id.date);
-            id = itemView.findViewById(R.id.id);
+//            id = itemView.findViewById(R.id.id);
             commitMsg = itemView.findViewById(R.id.commitMsg);
-            username = itemView.findViewById(R.id.username);
+//            username = itemView.findViewById(R.id.username);
             avatar = itemView.findViewById(R.id.avatar);
         }
     }

@@ -1,17 +1,11 @@
 package com.dev.githubbrowser;
 
-import static android.content.ContentValues.TAG;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,9 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.dev.githubbrowser.model.Issue;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -64,7 +55,6 @@ public class IAdapter extends RecyclerView.Adapter<IAdapter.myviewholder>{
             issueAvatar = itemView.findViewById(R.id.issueAvatar);
             issueCreator = itemView.findViewById(R.id.issueCreator);
             issueTitle = itemView.findViewById(R.id.issueTitle);
-            issueAvatar = itemView.findViewById(R.id.issueAvatar);
         }
     }
 }
